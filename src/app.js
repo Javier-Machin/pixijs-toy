@@ -2,35 +2,37 @@ import initialize from './cfg/init';
 import * as PIXI from 'pixi.js';
 
 // Aliases
-const Application = PIXI.Application;
-const loader = PIXI.Loader.shared; // PixiJS exposes a premade instance for you to use.
-const resources = loader.resources;
+const Loader = PIXI.Loader.shared; // PixiJS exposes a premade instance.
+const Resources = Loader.resources;
 const Sprite = PIXI.Sprite;
+const Utils = PIXI.utils;
+const Rectangle = PIXI.Rectangle;
 
 const app = initialize();
 
-loader.add('hero', './spritesheets/hero.png').load(setup);
+// Add texture atlas
+Loader.add('./spritesheets/hero.json').load(setup);
 
 function setup() {
-  // let sheet = PIXI.Loader.shared.resources['assets/spritesheet.json'].spritesheet;
-  const hero = new Sprite(resources.hero.texture);
+  // Load background / map
+
+  // Load item
+
+  // Load hero texture atlas and give it an Alias
+  const heroTextures = Resources['./spritesheets/hero.json'].textures;
+
+  // Pick one texture and create a sprite from it
+  const hero = new Sprite(heroTextures['hero-down-2']);
+
+  // Scale sprite
+  hero.scale.set(3.5, 3.5);
+
+  // Position sprite
+  hero.position.set(255, 255);
+
+  // Add sprite to the canvas
   app.stage.addChild(hero);
 
-  // hero.visible = false;
+  // Render the stage
+  app.renderer.render(app.stage);
 }
-
-// Multiple files load
-
-// loader
-//   .add("images/imageOne.png")
-//   .add("images/imageTwo.png")
-//   .add("images/imageThree.png")
-//   .load(setup);
-
-// loader
-//   .add([
-//     "images/imageOne.png",
-//     "images/imageTwo.png",
-//     "images/imageThree.png"
-//   ])
-//   .load(setup);
