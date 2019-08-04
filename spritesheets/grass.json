@@ -1,0 +1,79 @@
+{
+  "frames": {
+    "grass-tile-2.png": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 48,
+        "h": 48
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 48,
+        "h": 48
+      },
+      "sourceSize": {
+        "w": 48,
+        "h": 48
+      }
+    },
+    "grass-tile-3.png": {
+      "frame": {
+        "x": 48,
+        "y": 0,
+        "w": 48,
+        "h": 48
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 48,
+        "h": 48
+      },
+      "sourceSize": {
+        "w": 48,
+        "h": 48
+      }
+    },
+    "grass-tile.png": {
+      "frame": {
+        "x": 96,
+        "y": 0,
+        "w": 48,
+        "h": 48
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 48,
+        "h": 48
+      },
+      "sourceSize": {
+        "w": 48,
+        "h": 48
+      }
+    }
+  },
+  "animations": {
+    "grass-tile": ["grass-tile-2.png", "grass-tile-3.png"]
+  },
+  "meta": {
+    "app": "https://www.codeandweb.com/texturepacker",
+    "version": "1.0",
+    "image": "grass.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 144,
+      "h": 48
+    },
+    "scale": "1",
+    "smartupdate": "$TexturePacker:SmartUpdate:0124f4cfbac6e867c38503c67420294c:5b480b686b204629b3573529aa4bdcf8:b5eff027e4675af447e0c9c1b13dff5b$"
+  }
+}
